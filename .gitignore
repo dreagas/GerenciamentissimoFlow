@@ -1,3 +1,14 @@
-.md
-/AUTONOMIA.md
-/PLANO_GERENCIAMENTISSIMOFLOW_V1.md
+/target/
+*.zip
+start-metadata.json
+.env
+.env.*
+!.env.example
+application-local.yml
+application-local.yaml
+*.log
+.idea/
+.vscode/
+.mvn/wrapper/maven-wrapper.jar
+build/
+dist/

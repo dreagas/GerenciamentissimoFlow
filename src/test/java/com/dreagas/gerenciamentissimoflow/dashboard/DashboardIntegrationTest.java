@@ -51,7 +51,7 @@ class DashboardIntegrationTest {
 		String suffix = UUID.randomUUID().toString();
 		User user = users.saveAndFlush(new User("Dash", "dash-" + suffix + "@example.test", "hash", UserRole.OPERATOR));
 		Warehouse warehouse = warehouses.saveAndFlush(new Warehouse("DW-" + suffix, "Dashboard", "Center"));
-		Product product = products.saveAndFlush(new Product("DP-" + suffix, "Dashboard", null, null, BigDecimal.ONE, 5));
+		Product product = products.saveAndFlush(new Product("DP-" + suffix, "Dashboard", null, null, BigDecimal.ONE, 2));
 		inventory.receive(product.getId(), warehouse.getId(), 2, "dashboard receipt");
 		CustomerOrder draft = orders.saveAndFlush(new CustomerOrder(warehouse, user));
 		draft.addItem(new OrderItem(product, 1, BigDecimal.ONE));

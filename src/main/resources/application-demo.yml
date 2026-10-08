@@ -7,6 +7,9 @@ spring:
     username: ${DB_USERNAME:gerenciamentissimoflow}
     password: ${DB_PASSWORD:}
     driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      mode: never
   jpa:
     show-sql: false
 springdoc:
@@ -23,3 +26,6 @@ app:
   jwt:
     secret: ${JWT_SECRET:}
     expiration-seconds: ${JWT_EXPIRATION_SECONDS:3600}
+logging:
+  level:
+    root: WARN

@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: gerenciamentissimoflow
+  profiles:
+    default: dev
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: never
+logging:
+  pattern:
+    level: "%5p [requestId:%X{requestId:-}]"
+  level:
+    root: INFO
+server:
+  shutdown: graceful
+  error:
+    include-message: never

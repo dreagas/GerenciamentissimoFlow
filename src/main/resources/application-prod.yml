@@ -1,0 +1,23 @@
+spring:
+  web:
+    cors:
+      allowed-origins: ${CORS_ALLOWED_ORIGINS}
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: false
+logging:
+  level:
+    root: INFO
+app:
+  jwt:
+    secret: ${JWT_SECRET:}
+    expiration-seconds: ${JWT_EXPIRATION_SECONDS:3600}
+springdoc:
+  swagger-ui:
+    enabled: false
+  api-docs:
+    enabled: false

@@ -1,0 +1,18 @@
+spring:
+  web:
+    cors:
+      allowed-origins: http://localhost:3000
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/gerenciamentissimoflow_test}
+    username: ${DB_USERNAME:gerenciamentissimoflow}
+    password: ${DB_PASSWORD:gerenciamentissimoflow}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: false
+logging:
+  level:
+    root: WARN
+app:
+  jwt:
+    secret: test-only-signing-key-with-at-least-32-bytes
+    expiration-seconds: 3600

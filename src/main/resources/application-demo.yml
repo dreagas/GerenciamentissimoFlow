@@ -1,0 +1,25 @@
+spring:
+  web:
+    cors:
+      allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000}
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/gerenciamentissimoflow_demo}
+    username: ${DB_USERNAME:gerenciamentissimoflow}
+    password: ${DB_PASSWORD:}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: false
+springdoc:
+  swagger-ui:
+    enabled: true
+  api-docs:
+    enabled: true
+app:
+  demo:
+    data-is-fictional: true
+    admin:
+      email: ${DEMO_ADMIN_EMAIL:demo-admin@example.invalid}
+      password: ${DEMO_ADMIN_PASSWORD:}
+  jwt:
+    secret: ${JWT_SECRET:}
+    expiration-seconds: ${JWT_EXPIRATION_SECONDS:3600}
